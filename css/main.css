@@ -92,6 +92,7 @@ h1 {
   font-family: 'Cherry Monospace-Light', 'Courier New', Courier, monospace;
 }
 
+/* Navigation links */
 nav a {
   text-decoration: none; /* gets rid of the underline */
   color: rgb( 0, 255, 0); /* There are a few ways to handle color... name, RGB, Hex are most common */
@@ -109,4 +110,22 @@ nav a:hover {
 nav > ul {
   /* UL must be directly one level into the nav */
   list-style: square;
+}
+
+/*
+ * Page content (Rubik Font testing)
+ */
+
+ .black-font {
+  font-weight: bolder;
+ }
+ .light-font {
+  font-weight: lighter;
+ }
+h2, p {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+}
+/* Target the 3rd <p> inside an element. */
+p:nth-of-type(3) {
+  font-family: 'Red Rose', cursive;
 }
