@@ -86,7 +86,17 @@ link @ https://make.wordpress.org/accessibility/handbook/markup/the-css-class-sc
   width: 1px;
   word-wrap: normal !important;
 }
-
+/*
+ * Body width 
+ */
+ body {
+   max-width: 800px;
+   /* Margin left/right auto will centre display "block"
+    * (non-text) elements
+    */
+   margin-right: auto;
+   margin-left: auto;
+ }
 /* headings */
 h1 {
   font-family: 'Cherry Monospace-Light', 'Courier New', Courier, monospace;
@@ -128,4 +138,10 @@ h2, p {
 /* Target the 3rd <p> inside an element. */
 p:nth-of-type(3) {
   font-family: 'Red Rose', cursive;
+}
+
+/* Align image in 3rd <p> */
+p:nth-of-type(3) img {
+  float: left;
+  margin-right: 50px;
 }
