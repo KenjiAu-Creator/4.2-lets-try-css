@@ -1,0 +1,32 @@
+html {
+  
+}
+/* Text meant only for screen readers.
+link @ https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+*/
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+nav a {
+  text-decoration: none; /* gets rid of the underline */
+  color: rgb( 0, 255, 0); /* There are a few ways to handle color... name, RGB, Hex are most common */
+}
+/* The "hover" state of any anchor (a) inside of a nav */
+nav a:hover {
+  color: rgb( 0, 0, 200);
+}
+
+nav > ul {
+  /* UL must be directly one level into the nav */
+  list-style: square;
+}
