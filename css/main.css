@@ -1,3 +1,16 @@
+/*
+ * This is NOT a selector! We are defining a font that the browser
+ * /client can downlad and use.
+ * link @ https://www.dafont.com/cherry.font
+ * You will need to create a new block for each font file / font family
+ */
+@font-face {
+  font-family: 'Cherry Monospace-Light';
+  src: url('../fonts/cherry-monospace/Cherry\ Monospace-Light.ttf') format('truetype');
+  font-weight: normal; /* Thickness: how bold or light is it? */
+  font-style: normal; /* Is it italic? */
+}
+
 html {
   
 }
@@ -17,9 +30,19 @@ link @ https://make.wordpress.org/accessibility/handbook/markup/the-css-class-sc
   word-wrap: normal !important;
 }
 
+/* headings */
+h1 {
+  font-family: 'Cherry Monospace-Light', 'Courier New', Courier, monospace;
+}
+
 nav a {
   text-decoration: none; /* gets rid of the underline */
   color: rgb( 0, 255, 0); /* There are a few ways to handle color... name, RGB, Hex are most common */
+
+  /* Font-Family is used for defining which font should be used here.
+   *  If the first font in the comma-separated list is not installed then it will move to the next font.
+   */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 /* The "hover" state of any anchor (a) inside of a nav */
 nav a:hover {
