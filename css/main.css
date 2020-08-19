@@ -154,6 +154,7 @@ p:nth-of-type(3) img {
    * margin-right: auto;
    * margin bottom: 1.5 em;
    * margin-left: auto;
+   Start at the mobile level and then move up in screen size
   */
 }
 
@@ -163,11 +164,30 @@ p:nth-of-type(3) img {
  * screens that are MINIMUM (This size or greater than)
  */
 
-@media screen and ( min width: 400px) {
+@media screen and ( min-width: 400px) {
+  html {
+    background-color: #dddddd;
+  }
   /* Align image in 3rd <p> */
    p:nth-of-type(3) img {
     max-width: 50%;
     float: left;
     margin-right: 50px;
   }
+}
+/* tablet */
+@media screen and ( min-width: 800px) {
+  html {
+    background-color: #aaaaaa;
+  }
+}
+/* small laptop */
+@media screen and ( min-width: 1024px) {
+  html {
+    background-color: #999;
+}
+/* Laptop */
+@media screen and ( min-width: 1200px) {
+  html {
+    background-color: #777;
 }
