@@ -159,11 +159,11 @@ footer {
     32px; /* Footer */
     ;
     grid-template-areas: 
-    "logo navigation navigation navigation navigation search"
-    "hero hero hero hero hero hero"
-    "service1 service1 service2 service2 service3 service3"
-    "additional additional additional contact contact contact"
-    "footer footer footer footer footer footer"
+    "logo       navigation navigation navigation navigation search"
+    "hero       hero       hero       hero       hero       hero"
+    "service1   service1   service2   service2   service3   service3"
+    "additional additional additional contact    contact    contact"
+    "footer     footer     footer     footer     footer     footer"
     ;
   }
 }
