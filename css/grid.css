@@ -1,0 +1,141 @@
+/* Basic browser default reset */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Colours for testing...
+ */
+ h1 {
+   background-color: lightseagreen;
+ }
+ #search {
+   background-color:lightgreen
+ }
+ nav {
+  background-color: lightsalmon;
+}
+.hero {
+  background-color: lightslategray;
+}
+.section-1 {
+  background-color: darkgoldenrod;
+}
+.section-2 {
+  background-color: darkmagenta;
+}
+.section-3 {
+  background-color: darkturquoise;
+}
+article {
+  background-color: blue;
+}
+#contact {
+  background-color: yellow;
+}
+footer {
+  background-color: red;
+}
+
+/* Let's initialize our grid */
+
+/* Much like flex, to have grid items cells, 
+ * You need to have a container with 
+ * display: grid;
+ * The contens (direct descendents) will follow
+ * grid rules!
+ *** We may be using body for this example
+ *** but you can put this on almost anything!
+ */
+
+ body {
+   display: grid;
+   /* Setting widths for columns... */
+   /* Column 1: 25%
+    * Column 2: 75%
+    */
+   grid-template-columns: 25% 75%;
+   /* Setting Heights for the rows... */
+   grid-template-rows: 
+    32px  /* Logo / search */
+    64px  /* Navigation */
+    300px /* Hero */
+    120px /* Section 1 */
+    120px /* Section 2 */
+    120px /* Section 3 */
+    200px /* Additional */
+    260px /* Contact */
+    32px; /* Footer */
+    grid-template-areas:
+      "logo search"
+      "navigation navigation"
+      "hero hero"
+      "service1 service1"
+      "service2 service2"
+      "service3 service3"
+      "additional additional"
+      "contact contact"
+      "footer footer"
+      ;
+ }
+ /* 
+  * Name each sections of our grid, so that we can easily place 
+  * our elements on it!
+ */
+ h1 {
+  grid-area: logo;
+}
+#search {
+  grid-area: search;
+}
+nav {
+ grid-area: navigation;
+}
+.hero {
+ grid-area: hero;
+}
+.section-1 {
+ grid-area: service1;
+}
+.section-2 {
+ grid-area: service2;
+}
+.section-3 {
+ grid-area: service3;
+}
+article {
+ grid-area: additional;
+}
+#contact {
+ grid-area: contact;
+}
+footer {
+ grid-area: footer;
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+  body {
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows:
+    32px  /* Logo / search */
+    64px  /* Navigation */
+    500px /* Hero */
+    200px /* Section 1 & Section 2 */
+    180px /* Section 3 */
+    400px /* Additional & Contact */
+    32px; /* Footer */
+    ;
+    grid-template-areas: 
+      "logo search search"
+      "navigation navigation navigation"
+      "hero hero hero"
+      "service1 service1 service2"
+      "service3 service3 service3"
+      "additional additional contact"
+      "footer footer footer";
+  }
+}
